@@ -1,0 +1,122 @@
+# mkdocs.yml - On-Premise Installation Guide
+site_name: EPMware On-Premise Installation Guide
+site_description: Complete guide for installing and configuring EPMware on-premise deployment
+site_author: EPMware, Inc.
+site_url: https://install-guide.epmware.com
+
+validation:
+  nav:
+    omitted_files: info
+    not_found: warn
+    absolute_links: info
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: blue
+      accent: orange
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: blue
+      accent: orange
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  
+  features:
+  - navigation.top
+  - navigation.indexes
+  - search.highlight
+  - search.share
+  - search.suggest
+  - content.code.copy
+  - content.tooltips
+  - navigation.footer
+  - toc.follow
+  - toc.integrate
+  
+  logo: assets/images/epmware-logo.png
+  favicon: assets/images/favicon.ico
+
+extra_css:
+  - assets/css/custom.css
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - attr_list
+  - md_in_html
+  - tables
+  - footnotes
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+
+plugins:
+  - search:
+      lang: en
+  - glightbox:
+      touchNavigation: true
+      loop: false
+      effect: zoom
+
+# Navigation structure
+nav:
+  - Documentation Center: https://docs.epmware.com
+  
+  - Installation Guide Home: index.md
+  
+  - Getting Started: getting-started/index.md
+  
+  - System Requirements: requirements/index.md
+  
+  - Database Installation:
+    - database/index.md
+    - Oracle Database Setup: database/oracle-setup.md
+    - Database Objects: database/database-objects.md
+  
+  - Application Server Setup:
+    - app-server/index.md
+    - Tomcat Configuration: app-server/tomcat.md
+    - Windows Components: app-server/windows.md
+  
+  - EPMware Application:
+    - application/index.md
+    - Application Settings: application/settings.md
+  
+  - Target Applications:
+    - targets/index.md
+    - Planning Classic: targets/planning.md
+    - Hyperion HFM: targets/hfm.md
+    - Cloud Applications (PCMCS/EPBCS): targets/cloud.md
+  
+  - Agent Installation: agent/index.md
+  
+  - Post-Installation: post-install/index.md
+  
+  - Troubleshooting: troubleshooting/index.md
+  
+  - Appendices:
+    - appendices/index.md
+    - Installation Scripts: appendices/scripts.md
+    - Configuration Reference: appendices/configuration.md
+    - Migration Guide: appendices/migration.md
+
+extra:
+  copyright: |
+    © 2025 EPMware, Inc. All rights reserved. | 
+    <a href="https://www.epmware.com">www.epmware.com</a> | 
+    408-614-0442
