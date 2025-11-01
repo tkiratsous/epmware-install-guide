@@ -1,0 +1,2019 @@
+<!DOCTYPE html><html lang="en" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Complete guide for installing and configuring EPMware on-premise deployment">
+      
+      
+        <meta name="author" content="EPMware, Inc.">
+      
+      
+        <link rel="canonical" href="https://install-guide.epmware.com/targets/planning/">
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../hfm/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+    
+    
+      
+        <title>Planning Classic - EPMware On-Premise Installation Guide</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/css/custom.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#planning-classic" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="EPMware On-Premise Installation Guide" class="md-header__button md-logo" aria-label="EPMware On-Premise Installation Guide" data-md-component="logo">
+      
+  <img src="../../assets/images/epmware-logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            EPMware On-Premise Installation Guide
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Planning Classic
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="orange" aria-label="Switch to dark mode" type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="orange" aria-label="Switch to light mode" type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"></path></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="EPMware On-Premise Installation Guide" class="md-nav__button md-logo" aria-label="EPMware On-Premise Installation Guide" data-md-component="logo">
+      
+  <img src="../../assets/images/epmware-logo.png" alt="logo">
+
+    </a>
+    EPMware On-Premise Installation Guide
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://docs.epmware.com" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Documentation Center
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Installation Guide Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Getting Started
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../requirements/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    System Requirements
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5">
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../database/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Database Installation
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Database Installation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/oracle-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Oracle Database Setup
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/database-objects/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Database Objects
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6">
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../app-server/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Application Server Setup
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Application Server Setup
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../app-server/tomcat/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tomcat Configuration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../app-server/windows/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Windows Components
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7">
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../application/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    EPMware Application
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7" id="__nav_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            EPMware Application
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../application/settings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Application Settings
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Target Applications
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_8" id="__nav_8_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Target Applications
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Planning Classic
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Planning Classic
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#password-file-generation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Password File Generation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Password File Generation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#generate-password-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Generate Password File
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Generate Password File">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#steps-to-generate-password-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Steps to Generate Password File
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#password-file-location" class="md-nav__link">
+    <span class="md-ellipsis">
+      Password File Location
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-password-file-in-epmware" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configure Password File in EPMware
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lcm-administrator-role" class="md-nav__link">
+    <span class="md-ellipsis">
+      LCM Administrator Role
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="LCM Administrator Role">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#grant-lcm-administrator-role" class="md-nav__link">
+    <span class="md-ellipsis">
+      Grant LCM Administrator Role
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verify-lcm-access" class="md-nav__link">
+    <span class="md-ellipsis">
+      Verify LCM Access
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#application-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Application Configuration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Application Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic Configuration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advanced-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced Configuration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#outline-load-utility-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Outline Load Utility Configuration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Outline Load Utility Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configure-outline-load" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configure Outline Load
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#outline-load-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Outline Load Options
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#metadata-import-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      Metadata Import Process
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Metadata Import Process">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configure-auto-import" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configure Auto-Import
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manual-import-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Manual Import Steps
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deployment-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deployment Configuration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Deployment Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#direct-deployment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Direct Deployment
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#batch-deployment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Batch Deployment
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security-filter-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security Filter Management
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Security Filter Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configure-security-filters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configure Security Filters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security-filter-deployment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security Filter Deployment
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#calculation-scripts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Calculation Scripts
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Calculation Scripts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configure-calculation-scripts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configure Calculation Scripts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-calculations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Calculations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#business-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      Business Rules
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Business Rules">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#business-rule-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Business Rule Integration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#validation-and-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Validation and Testing
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Validation and Testing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#test-connection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Test Connection
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validation-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      Validation Checklist
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Troubleshooting
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#common-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Issues
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#debug-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      Debug Mode
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#log-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Log Files
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Next Steps
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hfm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Hyperion HFM
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cloud/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cloud Applications (PCMCS/EPBCS)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../agent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Agent Installation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../post-install/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Post-Installation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Troubleshooting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12">
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../appendices/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Appendices
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_12" id="__nav_12_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12">
+            <span class="md-nav__icon md-icon"></span>
+            Appendices
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendices/scripts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Installation Scripts
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendices/configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Configuration Reference
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendices/migration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Migration Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="planning-classic">Planning Classic</h1>
+<p>This section covers the configuration of Oracle Hyperion Planning Classic applications in EPMware.</p>
+<h2 id="overview">Overview</h2>
+<p>Oracle Hyperion Planning Classic integration requires specific configuration including password file generation, LCM permissions, and application properties setup.</p>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>Before configuring Planning Classic:</p>
+<ul>
+<li>[ ] Planning application installed and running</li>
+<li>[ ] Administrator access to Planning</li>
+<li>[ ] LCM Administrator role assigned to EPMware user</li>
+<li>[ ] Network connectivity between EPMware and Planning</li>
+<li>[ ] EPMware agent installed on Planning server</li>
+</ul>
+<h2 id="password-file-generation">Password File Generation</h2>
+<p>EPMware requires an encrypted password file to authenticate with Planning applications.</p>
+<h3 id="generate-password-file">Generate Password File</h3>
+<div class="admonition note">
+<p class="admonition-title">Important</p>
+<p>The password file must be generated on the Planning application server using the Planning utilities.</p>
+</div>
+<h4 id="steps-to-generate-password-file">Steps to Generate Password File</h4>
+<ol>
+<li>
+<p><strong>Log on to Planning Server</strong>
+   </p><div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>ssh<span class="w"> </span>planning_server
+</span></code></pre></div><p></p>
+</li>
+<li>
+<p><strong>Navigate to Planning Directory</strong>
+   </p><div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># Linux</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nb">cd</span><span class="w"> </span>/Oracle/Middleware/user_projects/epmsystem1/Planning/planning1
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="c1"># Windows</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="nb">cd</span><span class="w"> </span>D:<span class="se">\O</span>racle<span class="se">\M</span>iddleware<span class="se">\u</span>ser_projects<span class="se">\e</span>pmsystem1<span class="se">\P</span>lanning<span class="se">\p</span>lanning1
+</span></code></pre></div><p></p>
+</li>
+<li>
+<p><strong>Run Password Encryption Utility</strong></p>
+</li>
+</ol>
+<p>For Windows:
+   </p><div class="language-batch highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>PasswordEncryption.cmd ew_hp_cl_pwd.txt
+</span></code></pre></div><p></p>
+<p>For Linux:
+   </p><div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>./PasswordEncryption.sh<span class="w"> </span>ew_hp_cl_pwd.txt
+</span></code></pre></div><p></p>
+<ol>
+<li><strong>Enter Password When Prompted</strong>
+   <div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>Enter password to encrypt: ********
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>Password has been encrypted and written to the file ew_hp_cl_pwd.txt successfully!
+</span></code></pre></div></li>
+</ol>
+<h3 id="password-file-location">Password File Location</h3>
+<p>Store the password file in a secure location:</p>
+<ul>
+<li>Linux: <code>/opt/epmware/config/planning_pwd.txt</code></li>
+<li>Windows: <code>D:\epmware\config\planning_pwd.txt</code></li>
+</ul>
+<h3 id="configure-password-file-in-epmware">Configure Password File in EPMware</h3>
+<ol>
+<li>Navigate to <strong>Configuration → Applications</strong></li>
+<li>Select your Planning application</li>
+<li>Locate <strong>PASSWORD_FILE</strong> property</li>
+<li>Right-click and select <strong>Edit Properties</strong></li>
+<li>Enter the full path to the password file</li>
+<li>Save configuration</li>
+</ol>
+<h2 id="lcm-administrator-role">LCM Administrator Role</h2>
+<p>The EPMware service account requires LCM Administrator privileges.</p>
+<h3 id="grant-lcm-administrator-role">Grant LCM Administrator Role</h3>
+<ol>
+<li>
+<p><strong>Access Planning Workspace</strong>
+   </p><div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>http://planning_server:19000/workspace
+</span></code></pre></div><p></p>
+</li>
+<li>
+<p><strong>Navigate to Shared Services</strong></p>
+</li>
+<li>
+<p>Administration → Shared Services Console</p>
+</li>
+<li>
+<p><strong>Assign LCM Role</strong></p>
+</li>
+<li>Navigate to User Management</li>
+<li>Find EPMware service account</li>
+<li>Assign roles:<ul>
+<li>LCM Administrator</li>
+<li>Planning Application Administrator (optional)</li>
+<li>Provisioning Manager (optional)</li>
+</ul>
+</li>
+</ol>
+<h3 id="verify-lcm-access">Verify LCM Access</h3>
+<p>Test LCM access using EPMware service account:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="c1"># Test LCM export</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>./Utility.sh<span class="w"> </span>/A:appname<span class="w"> </span>/U:epmware_user<span class="w"> </span>/P:password<span class="w"> </span>/EXPORT
+</span></code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">LCM Error</p>
+<p>If you see "Failed to authorize user for LCM migrations", the LCM Administrator role is not properly assigned.</p>
+</div>
+<h2 id="application-configuration">Application Configuration</h2>
+<h3 id="basic-configuration">Basic Configuration</h3>
+<p>Configure Planning application properties in EPMware:</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>APP_NAME</td>
+<td>PLANNING1</td>
+<td>Application name in Planning</td>
+</tr>
+<tr>
+<td>APP_URL</td>
+<td>http://server:8300/HyperionPlanning</td>
+<td>Planning URL</td>
+</tr>
+<tr>
+<td>INSTANCE_NAME</td>
+<td>planning1</td>
+<td>Planning instance name</td>
+</tr>
+<tr>
+<td>EPM_INSTANCE_HOME</td>
+<td>/Oracle/Middleware/user_projects/epmsystem1</td>
+<td>EPM instance path</td>
+</tr>
+<tr>
+<td>PASSWORD_FILE</td>
+<td>/opt/epmware/config/pwd.txt</td>
+<td>Password file path</td>
+</tr>
+<tr>
+<td>PLANNING_USER</td>
+<td>admin</td>
+<td>Planning administrator user</td>
+</tr>
+</tbody>
+</table>
+<h3 id="advanced-configuration">Advanced Configuration</h3>
+<div class="language-properties highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="c1"># Planning Configuration</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="na">planning.app.name</span><span class="o">=</span><span class="s">PLANNING1</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="na">planning.server.url</span><span class="o">=</span><span class="s">http://planning.company.com:8300</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="na">planning.admin.user</span><span class="o">=</span><span class="s">admin</span>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="na">planning.password.file</span><span class="o">=</span><span class="s">/opt/epmware/config/planning_pwd.txt</span>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="c1"># Import Settings</span>
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="na">planning.import.enabled</span><span class="o">=</span><span class="s">true</span>
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="na">planning.import.type</span><span class="o">=</span><span class="s">LCM</span>
+</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="na">planning.import.dimensions</span><span class="o">=</span><span class="s">Entity,Account,Product,Version,Scenario</span>
+</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="na">planning.import.preserve.formulas</span><span class="o">=</span><span class="s">true</span>
+</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a><span class="na">planning.import.preserve.member.order</span><span class="o">=</span><span class="s">true</span>
+</span><span id="__span-7-13"><a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>
+</span><span id="__span-7-14"><a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a><span class="c1"># Deployment Settings  </span>
+</span><span id="__span-7-15"><a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a><span class="na">planning.deployment.enabled</span><span class="o">=</span><span class="s">true</span>
+</span><span id="__span-7-16"><a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a><span class="na">planning.deployment.method</span><span class="o">=</span><span class="s">OUTLINE_LOAD</span>
+</span><span id="__span-7-17"><a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a><span class="na">planning.deployment.validate</span><span class="o">=</span><span class="s">true</span>
+</span><span id="__span-7-18"><a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a><span class="na">planning.deployment.clear.all.data</span><span class="o">=</span><span class="s">false</span>
+</span><span id="__span-7-19"><a id="__codelineno-7-19" name="__codelineno-7-19" href="#__codelineno-7-19"></a><span class="na">planning.deployment.restructure.database</span><span class="o">=</span><span class="s">true</span>
+</span><span id="__span-7-20"><a id="__codelineno-7-20" name="__codelineno-7-20" href="#__codelineno-7-20"></a>
+</span><span id="__span-7-21"><a id="__codelineno-7-21" name="__codelineno-7-21" href="#__codelineno-7-21"></a><span class="c1"># Refresh Settings</span>
+</span><span id="__span-7-22"><a id="__codelineno-7-22" name="__codelineno-7-22" href="#__codelineno-7-22"></a><span class="na">planning.refresh.database</span><span class="o">=</span><span class="s">true</span>
+</span><span id="__span-7-23"><a id="__codelineno-7-23" name="__codelineno-7-23" href="#__codelineno-7-23"></a><span class="na">planning.refresh.security.filters</span><span class="o">=</span><span class="s">true</span>
+</span><span id="__span-7-24"><a id="__codelineno-7-24" name="__codelineno-7-24" href="#__codelineno-7-24"></a><span class="na">planning.refresh.create.blocks</span><span class="o">=</span><span class="s">false</span>
+</span></code></pre></div>
+<h2 id="outline-load-utility-configuration">Outline Load Utility Configuration</h2>
+<p>For direct outline loads:</p>
+<h3 id="configure-outline-load">Configure Outline Load</h3>
+<div class="language-properties highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="c1"># Outline Load Settings</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="na">outline.load.utility.path</span><span class="o">=</span><span class="s">/Oracle/Middleware/EPMSystem11R1/products/Planning/bin</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="na">outline.load.command</span><span class="o">=</span><span class="s">OutlineLoad.sh</span>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="na">outline.load.parameters</span><span class="o">=</span><span class="s">/A:${app} /U:${user} /M /N /I:${file} /D:${dimension} /L:${log}</span>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="na">outline.load.delimiter</span><span class="o">=</span><span class="s">,</span>
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="na">outline.load.escape.character</span><span class="o">=</span><span class="se">\</span>
+</span></code></pre></div>
+<h3 id="outline-load-options">Outline Load Options</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>/A</td>
+<td>Application name</td>
+<td>/A:PLANNING1</td>
+</tr>
+<tr>
+<td>/U</td>
+<td>Username</td>
+<td>/U:admin</td>
+</tr>
+<tr>
+<td>/M</td>
+<td>Use password file</td>
+<td>/M</td>
+</tr>
+<tr>
+<td>/N</td>
+<td>No validation</td>
+<td>/N</td>
+</tr>
+<tr>
+<td>/I</td>
+<td>Input file</td>
+<td>/I:/tmp/metadata.csv</td>
+</tr>
+<tr>
+<td>/D</td>
+<td>Dimension name</td>
+<td>/D:Entity</td>
+</tr>
+<tr>
+<td>/L</td>
+<td>Log file</td>
+<td>/L:/tmp/outline.log</td>
+</tr>
+</tbody>
+</table>
+<h2 id="metadata-import-process">Metadata Import Process</h2>
+<h3 id="configure-auto-import">Configure Auto-Import</h3>
+<p>Enable automatic metadata import from Planning:</p>
+<div class="language-properties highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="c1"># Auto Import Configuration</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="na">import.auto.enabled</span><span class="o">=</span><span class="s">true</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="na">import.auto.schedule</span><span class="o">=</span><span class="s">0 0 2 * * ?  # Daily at 2 AM</span>
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="na">import.auto.dimensions</span><span class="o">=</span><span class="s">ALL</span>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="na">import.auto.backup.before</span><span class="o">=</span><span class="s">true</span>
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="na">import.auto.notification.enabled</span><span class="o">=</span><span class="s">true</span>
+</span></code></pre></div>
+<h3 id="manual-import-steps">Manual Import Steps</h3>
+<ol>
+<li>Navigate to <strong>Metadata → Import</strong></li>
+<li>Select Planning application</li>
+<li>Choose dimensions:</li>
+<li>Account</li>
+<li>Entity  </li>
+<li>Product</li>
+<li>Version</li>
+<li>Scenario</li>
+<li>Custom dimensions</li>
+<li>Set import options:</li>
+<li>Clear existing metadata</li>
+<li>Preserve local changes</li>
+<li>Validate after import</li>
+<li>Click <strong>Import</strong></li>
+<li>Review import log</li>
+</ol>
+<h2 id="deployment-configuration">Deployment Configuration</h2>
+<h3 id="direct-deployment">Direct Deployment</h3>
+<p>Configure direct deployment to Planning:</p>
+<div class="language-properties highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="c1"># Direct Deployment</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="na">deployment.direct.enabled</span><span class="o">=</span><span class="s">true</span>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="na">deployment.direct.method</span><span class="o">=</span><span class="s">OUTLINE_LOAD</span>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="na">deployment.direct.async</span><span class="o">=</span><span class="s">false</span>
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="na">deployment.direct.timeout</span><span class="o">=</span><span class="s">3600</span>
+</span></code></pre></div>
+<h3 id="batch-deployment">Batch Deployment</h3>
+<p>Configure batch deployment:</p>
+<div class="language-properties highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="c1"># Batch Deployment</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="na">deployment.batch.enabled</span><span class="o">=</span><span class="s">true</span>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="na">deployment.batch.schedule</span><span class="o">=</span><span class="s">0 0 22 * * ?  # 10 PM daily</span>
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="na">deployment.batch.size</span><span class="o">=</span><span class="s">5000</span>
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="na">deployment.batch.parallel.dimensions</span><span class="o">=</span><span class="s">false</span>
+</span></code></pre></div>
+<h2 id="security-filter-management">Security Filter Management</h2>
+<h3 id="configure-security-filters">Configure Security Filters</h3>
+<div class="language-properties highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="c1"># Security Filter Settings</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="na">security.filter.enabled</span><span class="o">=</span><span class="s">true</span>
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="na">security.filter.refresh.after.deployment</span><span class="o">=</span><span class="s">true</span>
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="na">security.filter.validate.before.deployment</span><span class="o">=</span><span class="s">true</span>
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="na">security.filter.backup.existing</span><span class="o">=</span><span class="s">true</span>
+</span></code></pre></div>
+<h3 id="security-filter-deployment">Security Filter Deployment</h3>
+<ol>
+<li>Define filters in EPMware</li>
+<li>Map to Planning users/groups</li>
+<li>Deploy filters</li>
+<li>Refresh security in Planning</li>
+</ol>
+<h2 id="calculation-scripts">Calculation Scripts</h2>
+<h3 id="configure-calculation-scripts">Configure Calculation Scripts</h3>
+<div class="language-properties highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="c1"># Calculation Settings</span>
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="na">calc.run.after.deployment</span><span class="o">=</span><span class="s">true</span>
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="na">calc.script.default</span><span class="o">=</span><span class="s">AggAll</span>
+</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="na">calc.script.timeout</span><span class="o">=</span><span class="s">1800</span>
+</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="na">calc.script.log.enabled</span><span class="o">=</span><span class="s">true</span>
+</span></code></pre></div>
+<h3 id="common-calculations">Common Calculations</h3>
+<table>
+<thead>
+<tr>
+<th>Script</th>
+<th>Purpose</th>
+<th>When to Run</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AggAll</td>
+<td>Aggregate all data</td>
+<td>After metadata changes</td>
+</tr>
+<tr>
+<td>CalcAll</td>
+<td>Calculate all data</td>
+<td>After data load</td>
+</tr>
+<tr>
+<td>ClearAll</td>
+<td>Clear all data</td>
+<td>Before major restructure</td>
+</tr>
+</tbody>
+</table>
+<h2 id="business-rules">Business Rules</h2>
+<h3 id="business-rule-integration">Business Rule Integration</h3>
+<div class="language-properties highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="c1"># Business Rule Settings</span>
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="na">business.rule.enabled</span><span class="o">=</span><span class="s">true</span>
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="na">business.rule.runtime.prompts</span><span class="o">=</span><span class="s">true</span>
+</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="na">business.rule.sequence</span><span class="o">=</span><span class="s">RuleSet1,RuleSet2</span>
+</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="na">business.rule.error.handling</span><span class="o">=</span><span class="s">CONTINUE</span>
+</span></code></pre></div>
+<h2 id="validation-and-testing">Validation and Testing</h2>
+<h3 id="test-connection">Test Connection</h3>
+<p>Test Planning connection:</p>
+<ol>
+<li>Navigate to <strong>Configuration → Applications</strong></li>
+<li>Select Planning application</li>
+<li>Click <strong>Test Connection</strong></li>
+<li>Verify:</li>
+<li>Network connectivity</li>
+<li>Authentication</li>
+<li>API availability</li>
+<li>LCM access</li>
+</ol>
+<h3 id="validation-checklist">Validation Checklist</h3>
+<ul>
+<li>[ ] Password file created and accessible</li>
+<li>[ ] LCM Administrator role assigned</li>
+<li>[ ] Application properties configured</li>
+<li>[ ] Import test successful</li>
+<li>[ ] Deployment test successful</li>
+<li>[ ] Security filters working</li>
+<li>[ ] Calculations running</li>
+</ul>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<h3 id="common-issues">Common Issues</h3>
+<p><strong>Password File Not Found</strong>
+</p><div class="language-text highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>Error: Cannot locate password file
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>Solution: Verify file path and permissions
+</span></code></pre></div><p></p>
+<p><strong>LCM Authorization Failed</strong>
+</p><div class="language-text highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>Error: Failed to authorize user for LCM migrations
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>Solution: Grant LCM Administrator role in Shared Services
+</span></code></pre></div><p></p>
+<p><strong>Outline Load Failed</strong>
+</p><div class="language-text highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>Error: Outline load utility error
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>Solution: Check dimension name and data format
+</span></code></pre></div><p></p>
+<p><strong>Connection Timeout</strong>
+</p><div class="language-text highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>Error: Connection to Planning timed out
+</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>Solution: Verify Planning services are running
+</span></code></pre></div><p></p>
+<h3 id="debug-mode">Debug Mode</h3>
+<p>Enable debug logging:</p>
+<div class="language-properties highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="c1"># Debug Settings</span>
+</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="na">debug.planning.enabled</span><span class="o">=</span><span class="s">true</span>
+</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="na">debug.planning.api.calls</span><span class="o">=</span><span class="s">true</span>
+</span><span id="__span-19-4"><a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a><span class="na">debug.planning.lcm.operations</span><span class="o">=</span><span class="s">true</span>
+</span><span id="__span-19-5"><a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a><span class="na">debug.planning.outline.load</span><span class="o">=</span><span class="s">true</span>
+</span></code></pre></div>
+<h3 id="log-files">Log Files</h3>
+<p>Check these logs for issues:</p>
+<table>
+<thead>
+<tr>
+<th>Log File</th>
+<th>Location</th>
+<th>Content</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Planning.log</td>
+<td>$EPM_ORACLE_HOME/diagnostics/logs</td>
+<td>Planning application log</td>
+</tr>
+<tr>
+<td>OutlineLoad.log</td>
+<td>/tmp/</td>
+<td>Outline load results</td>
+</tr>
+<tr>
+<td>LCM.log</td>
+<td>$EPM_ORACLE_HOME/diagnostics/logs</td>
+<td>LCM operations</td>
+</tr>
+<tr>
+<td>EPMware.log</td>
+<td>/opt/epmware/logs</td>
+<td>EPMware operations</td>
+</tr>
+</tbody>
+</table>
+<h2 id="best-practices">Best Practices</h2>
+<ol>
+<li><strong>Password Management</strong></li>
+<li>Rotate passwords regularly</li>
+<li>Use strong passwords</li>
+<li>
+<p>Secure password file access</p>
+</li>
+<li>
+<p><strong>LCM Operations</strong></p>
+</li>
+<li>Schedule during off-hours</li>
+<li>Backup before import</li>
+<li>
+<p>Validate after deployment</p>
+</li>
+<li>
+<p><strong>Performance</strong></p>
+</li>
+<li>Optimize outline load files</li>
+<li>Use incremental updates</li>
+<li>
+<p>Monitor calculation times</p>
+</li>
+<li>
+<p><strong>Maintenance</strong></p>
+</li>
+<li>Regular database restructure</li>
+<li>Archive old data</li>
+<li>Monitor application size</li>
+</ol>
+<h2 id="next-steps">Next Steps</h2>
+<p>After configuring Planning Classic:</p>
+<ol>
+<li>Configure other target applications</li>
+<li>Set up deployment schedules</li>
+<li>Create workflows</li>
+<li>Test end-to-end process</li>
+</ol>
+<hr>
+<p>© 2025 EPMware, Inc. All rights reserved.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer">
+        
+          
+          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: Target Applications">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Target Applications
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../hfm/" class="md-footer__link md-footer__link--next" aria-label="Next: Hyperion HFM">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Hyperion HFM
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.indexes", "search.highlight", "search.share", "search.suggest", "content.code.copy", "content.tooltips", "navigation.footer", "toc.follow", "toc.integrate"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>

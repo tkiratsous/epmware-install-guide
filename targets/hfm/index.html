@@ -1,0 +1,2123 @@
+<!DOCTYPE html><html lang="en" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Complete guide for installing and configuring EPMware on-premise deployment">
+      
+      
+        <meta name="author" content="EPMware, Inc.">
+      
+      
+        <link rel="canonical" href="https://install-guide.epmware.com/targets/hfm/">
+      
+      
+        <link rel="prev" href="../planning/">
+      
+      
+        <link rel="next" href="../cloud/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+    
+    
+      
+        <title>Hyperion HFM - EPMware On-Premise Installation Guide</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/css/custom.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#hyperion-hfm" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="EPMware On-Premise Installation Guide" class="md-header__button md-logo" aria-label="EPMware On-Premise Installation Guide" data-md-component="logo">
+      
+  <img src="../../assets/images/epmware-logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            EPMware On-Premise Installation Guide
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Hyperion HFM
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="orange" aria-label="Switch to dark mode" type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="orange" aria-label="Switch to light mode" type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"></path></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="EPMware On-Premise Installation Guide" class="md-nav__button md-logo" aria-label="EPMware On-Premise Installation Guide" data-md-component="logo">
+      
+  <img src="../../assets/images/epmware-logo.png" alt="logo">
+
+    </a>
+    EPMware On-Premise Installation Guide
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://docs.epmware.com" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Documentation Center
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Installation Guide Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Getting Started
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../requirements/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    System Requirements
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5">
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../database/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Database Installation
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Database Installation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/oracle-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Oracle Database Setup
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/database-objects/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Database Objects
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6">
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../app-server/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Application Server Setup
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Application Server Setup
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../app-server/tomcat/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tomcat Configuration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../app-server/windows/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Windows Components
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7">
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../application/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    EPMware Application
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7" id="__nav_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            EPMware Application
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../application/settings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Application Settings
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Target Applications
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_8" id="__nav_8_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Target Applications
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../planning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Planning Classic
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Hyperion HFM
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Hyperion HFM
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#regproperties-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      reg.properties Configuration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="reg.properties Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#copy-regproperties-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Copy reg.properties File
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Copy reg.properties File">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#steps-to-configure-regproperties" class="md-nav__link">
+    <span class="md-ellipsis">
+      Steps to Configure reg.properties
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#regproperties-content" class="md-nav__link">
+    <span class="md-ellipsis">
+      reg.properties Content
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#application-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Application Configuration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Application Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-hfm-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic HFM Configuration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advanced-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced Configuration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#windows-specific-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Windows Specific Configuration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Windows Specific Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cygwin-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cygwin Installation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cygwin Installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#install-cygwin" class="md-nav__link">
+    <span class="md-ellipsis">
+      Install Cygwin
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-cygwin-environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configure Cygwin Environment
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hfm-api-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      HFM API Configuration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="HFM API Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configure-hfm-web-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configure HFM Web Services
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hfm-sdk-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      HFM SDK Configuration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#metadata-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Metadata Management
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Metadata Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dimension-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dimension Configuration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metadata-import" class="md-nav__link">
+    <span class="md-ellipsis">
+      Metadata Import
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Metadata Import">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configure-auto-import" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configure Auto-Import
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manual-import-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      Manual Import Process
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rules-and-calculations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rules and Calculations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Rules and Calculations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hfm-rules-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      HFM Rules Management
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#calculation-scripts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Calculation Scripts
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security Configuration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Security Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hfm-security-classes" class="md-nav__link">
+    <span class="md-ellipsis">
+      HFM Security Classes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#user-provisioning" class="md-nav__link">
+    <span class="md-ellipsis">
+      User Provisioning
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Management
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Data Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#data-extract-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Extract Configuration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-load-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Load Configuration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#journal-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Journal Management
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Journal Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#journal-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Journal Configuration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#consolidation-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Consolidation Settings
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Consolidation Settings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configure-consolidation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configure Consolidation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#validation-and-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Validation and Testing
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Validation and Testing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#test-hfm-connection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Test HFM Connection
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validation-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      Validation Checklist
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Troubleshooting
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#common-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Issues
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#debug-logging" class="md-nav__link">
+    <span class="md-ellipsis">
+      Debug Logging
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#log-file-locations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Log File Locations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#performance-optimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Performance Optimization
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Performance Optimization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#connection-pool-tuning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Connection Pool Tuning
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metadata-load-optimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Metadata Load Optimization
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Next Steps
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cloud/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cloud Applications (PCMCS/EPBCS)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../agent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Agent Installation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../post-install/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Post-Installation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Troubleshooting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12">
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../appendices/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Appendices
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_12" id="__nav_12_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12">
+            <span class="md-nav__icon md-icon"></span>
+            Appendices
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendices/scripts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Installation Scripts
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendices/configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Configuration Reference
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendices/migration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Migration Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="hyperion-hfm">Hyperion HFM</h1>
+<p>This section covers the configuration of Oracle Hyperion Financial Management (HFM) Classic applications in EPMware.</p>
+<h2 id="overview">Overview</h2>
+<p>HFM integration requires specific configuration steps including reg.properties file setup and Windows-specific components for on-premise installations.</p>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>Before configuring HFM:</p>
+<ul>
+<li>[ ] HFM application installed and running</li>
+<li>[ ] HFM Administrator access</li>
+<li>[ ] EPMware agent installed on HFM server</li>
+<li>[ ] Cygwin installed (Windows servers)</li>
+<li>[ ] reg.properties file configured</li>
+</ul>
+<h2 id="regproperties-configuration">reg.properties Configuration</h2>
+<p>The reg.properties file is required for HFM integration on Windows servers.</p>
+<h3 id="copy-regproperties-file">Copy reg.properties File</h3>
+<div class="admonition important">
+<p class="admonition-title">Required for HFM</p>
+<p>This step is critical for HFM connectivity. The reg.properties file must be copied to the correct EPM instance directory.</p>
+</div>
+<h4 id="steps-to-configure-regproperties">Steps to Configure reg.properties</h4>
+<ol>
+<li>
+<p><strong>Log on to HFM Application Server</strong>
+   </p><div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Remote Desktop to HFM server
+</span></code></pre></div><p></p>
+</li>
+<li>
+<p><strong>Locate Source reg.properties</strong></p>
+</li>
+</ol>
+<p>Source location:
+   </p><div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>D:\Oracle\Middleware\user_projects\config\foundation\11.1.2.0\reg.properties
+</span></code></pre></div><p></p>
+<ol>
+<li><strong>Copy to EPM Instance Directory</strong></li>
+</ol>
+<p>Destination location:
+   </p><div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>D:\Oracle\Middleware\user_projects\epmsystem1\config\foundation\11.1.2.0\
+</span></code></pre></div><p></p>
+<p>Command:
+   </p><div class="language-batch highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">copy</span> D:\Oracle\Middleware\user_projects\config\foundation\11.1.2.0\reg.properties <span class="se">^</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="se"> </span>    D:\Oracle\Middleware\user_projects\epmsystem1\config\foundation\11.1.2.0\
+</span></code></pre></div><p></p>
+<ol>
+<li><strong>Verify File Copied</strong>
+   <div class="language-batch highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">dir</span> D:\Oracle\Middleware\user_projects\epmsystem1\config\foundation\11.1.2.0\reg.properties
+</span></code></pre></div></li>
+</ol>
+<h3 id="regproperties-content">reg.properties Content</h3>
+<p>Verify the reg.properties file contains HFM configuration:</p>
+<div class="language-properties highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1"># HFM Configuration</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="na">HFM.ApplicationServer</span><span class="o">=</span><span class="s">HFMSERVER</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="na">HFM.ClusterName</span><span class="o">=</span><span class="s">HFMCLUSTER</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="na">HFM.DatabaseServer</span><span class="o">=</span><span class="s">DBSERVER</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="na">HFM.DatabaseName</span><span class="o">=</span><span class="s">HFMDB</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="na">HFM.WebServer</span><span class="o">=</span><span class="s">http://hfm.company.com</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="na">HFM.WebServerPort</span><span class="o">=</span><span class="s">80</span>
+</span></code></pre></div>
+<h2 id="application-configuration">Application Configuration</h2>
+<h3 id="basic-hfm-configuration">Basic HFM Configuration</h3>
+<p>Configure HFM application properties in EPMware:</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>APP_NAME</td>
+<td>HFM_PROD</td>
+<td>HFM application name</td>
+</tr>
+<tr>
+<td>APP_SERVER</td>
+<td>HFMSERVER</td>
+<td>HFM application server</td>
+</tr>
+<tr>
+<td>CLUSTER_NAME</td>
+<td>HFMCLUSTER</td>
+<td>HFM cluster name</td>
+</tr>
+<tr>
+<td>DATABASE_SERVER</td>
+<td>DBSERVER</td>
+<td>HFM database server</td>
+</tr>
+<tr>
+<td>DATABASE_NAME</td>
+<td>HFMDB</td>
+<td>HFM database name</td>
+</tr>
+<tr>
+<td>HFM_USER</td>
+<td>admin</td>
+<td>HFM administrator</td>
+</tr>
+</tbody>
+</table>
+<h3 id="advanced-configuration">Advanced Configuration</h3>
+<div class="language-properties highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="c1"># HFM Configuration</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="na">hfm.app.name</span><span class="o">=</span><span class="s">HFM_PROD</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="na">hfm.server.name</span><span class="o">=</span><span class="s">HFMSERVER</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="na">hfm.cluster.name</span><span class="o">=</span><span class="s">HFMCLUSTER</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="na">hfm.database.server</span><span class="o">=</span><span class="s">DBSERVER</span>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="na">hfm.database.name</span><span class="o">=</span><span class="s">HFMDB</span>
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="c1"># Connection Settings</span>
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="na">hfm.connection.timeout</span><span class="o">=</span><span class="s">300</span>
+</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="na">hfm.connection.retry.count</span><span class="o">=</span><span class="s">3</span>
+</span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="na">hfm.connection.pool.size</span><span class="o">=</span><span class="s">10</span>
+</span><span id="__span-6-12"><a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>
+</span><span id="__span-6-13"><a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a><span class="c1"># Import Settings</span>
+</span><span id="__span-6-14"><a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a><span class="na">hfm.import.enabled</span><span class="o">=</span><span class="s">true</span>
+</span><span id="__span-6-15"><a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a><span class="na">hfm.import.method</span><span class="o">=</span><span class="s">NATIVE</span>
+</span><span id="__span-6-16"><a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a><span class="na">hfm.import.dimensions</span><span class="o">=</span><span class="s">Entity,Account,Custom1,Custom2</span>
+</span><span id="__span-6-17"><a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a><span class="na">hfm.import.preserve.data</span><span class="o">=</span><span class="s">true</span>
+</span><span id="__span-6-18"><a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a>
+</span><span id="__span-6-19"><a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a><span class="c1"># Deployment Settings</span>
+</span><span id="__span-6-20"><a id="__codelineno-6-20" name="__codelineno-6-20" href="#__codelineno-6-20"></a><span class="na">hfm.deployment.enabled</span><span class="o">=</span><span class="s">true</span>
+</span><span id="__span-6-21"><a id="__codelineno-6-21" name="__codelineno-6-21" href="#__codelineno-6-21"></a><span class="na">hfm.deployment.method</span><span class="o">=</span><span class="s">METADATA_LOAD</span>
+</span><span id="__span-6-22"><a id="__codelineno-6-22" name="__codelineno-6-22" href="#__codelineno-6-22"></a><span class="na">hfm.deployment.validate</span><span class="o">=</span><span class="s">true</span>
+</span><span id="__span-6-23"><a id="__codelineno-6-23" name="__codelineno-6-23" href="#__codelineno-6-23"></a><span class="na">hfm.deployment.backup.before</span><span class="o">=</span><span class="s">true</span>
+</span></code></pre></div>
+<h2 id="windows-specific-configuration">Windows Specific Configuration</h2>
+<h3 id="cygwin-installation">Cygwin Installation</h3>
+<p>Cygwin is required on Windows servers for script execution.</p>
+<h4 id="install-cygwin">Install Cygwin</h4>
+<ol>
+<li><strong>Download Cygwin</strong></li>
+<li>Visit <a href="http://www.cygwin.com">www.cygwin.com</a></li>
+<li>
+<p>Download setup-x86_64.exe</p>
+</li>
+<li>
+<p><strong>Run Installation</strong>
+   </p><div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>setup-x86_64.exe
+</span></code></pre></div><p></p>
+</li>
+<li>
+<p><strong>Select Installation Options</strong></p>
+</li>
+<li>Install from Internet</li>
+<li>Root Directory: <code>C:\cygwin</code></li>
+<li>Install for: All Users</li>
+<li>
+<p>Local Package Directory: <code>C:\cygwin\packages</code></p>
+</li>
+<li>
+<p><strong>Select Packages</strong></p>
+</li>
+<li>Base packages (default)</li>
+<li>SSH utilities</li>
+<li>Perl</li>
+<li>
+<p>Python</p>
+</li>
+<li>
+<p><strong>Complete Installation</strong></p>
+</li>
+</ol>
+<h3 id="configure-cygwin-environment">Configure Cygwin Environment</h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="c1"># Add to Windows PATH</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>C:<span class="se">\c</span>ygwin<span class="se">\b</span>in
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="c1"># Verify installation</span>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>cygwin<span class="w"> </span>--version
+</span></code></pre></div>
+<h2 id="hfm-api-configuration">HFM API Configuration</h2>
+<h3 id="configure-hfm-web-services">Configure HFM Web Services</h3>
+<div class="language-properties highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="c1"># HFM Web Services</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="na">hfm.ws.url</span><span class="o">=</span><span class="s">http://hfm.company.com/hfm/webservices</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="na">hfm.ws.timeout</span><span class="o">=</span><span class="s">60000</span>
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="na">hfm.ws.auth.type</span><span class="o">=</span><span class="s">BASIC</span>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="na">hfm.ws.username</span><span class="o">=</span><span class="s">admin</span>
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="na">hfm.ws.password</span><span class="o">=</span><span class="s">encrypted_password</span>
+</span></code></pre></div>
+<h3 id="hfm-sdk-configuration">HFM SDK Configuration</h3>
+<div class="language-properties highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="c1"># HFM SDK Settings</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="na">hfm.sdk.path</span><span class="o">=</span><span class="s">D:</span><span class="se">\O</span><span class="s">racle</span><span class="se">\M</span><span class="s">iddleware</span><span class="se">\E</span><span class="s">PMSystem11R1</span><span class="se">\p</span><span class="s">roducts</span><span class="se">\F</span><span class="s">inancialManagement</span><span class="se">\S</span><span class="s">DK</span>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="na">hfm.sdk.lib.path</span><span class="o">=</span><span class="s">D:</span><span class="se">\O</span><span class="s">racle</span><span class="se">\M</span><span class="s">iddleware</span><span class="se">\E</span><span class="s">PMSystem11R1</span><span class="se">\p</span><span class="s">roducts</span><span class="se">\F</span><span class="s">inancialManagement</span><span class="se">\l</span><span class="s">ib</span>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="na">hfm.sdk.timeout</span><span class="o">=</span><span class="s">300</span>
+</span></code></pre></div>
+<h2 id="metadata-management">Metadata Management</h2>
+<h3 id="dimension-configuration">Dimension Configuration</h3>
+<p>Configure HFM dimensions in EPMware:</p>
+<table>
+<thead>
+<tr>
+<th>Dimension</th>
+<th>HFM Name</th>
+<th>Type</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Entity</td>
+<td>Entity</td>
+<td>Hierarchy</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Account</td>
+<td>Account</td>
+<td>Hierarchy</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Scenario</td>
+<td>Scenario</td>
+<td>List</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Period</td>
+<td>Period</td>
+<td>System</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Year</td>
+<td>Year</td>
+<td>System</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Value</td>
+<td>Value</td>
+<td>System</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>ICP</td>
+<td>ICP</td>
+<td>Hierarchy</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Custom1-4</td>
+<td>Custom1-4</td>
+<td>Hierarchy</td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+<h3 id="metadata-import">Metadata Import</h3>
+<h4 id="configure-auto-import">Configure Auto-Import</h4>
+<div class="language-properties highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="c1"># Auto Import from HFM</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="na">import.hfm.enabled</span><span class="o">=</span><span class="s">true</span>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="na">import.hfm.schedule</span><span class="o">=</span><span class="s">0 0 3 * * ?  # 3 AM daily</span>
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="na">import.hfm.dimensions</span><span class="o">=</span><span class="s">Entity,Account,Custom1,Custom2</span>
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="na">import.hfm.include.descriptions</span><span class="o">=</span><span class="s">true</span>
+</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="na">import.hfm.include.aliases</span><span class="o">=</span><span class="s">true</span>
+</span></code></pre></div>
+<h4 id="manual-import-process">Manual Import Process</h4>
+<ol>
+<li>Navigate to <strong>Metadata → Import</strong></li>
+<li>Select HFM application</li>
+<li>Choose dimensions</li>
+<li>Set import options:</li>
+<li>Include consolidation methods</li>
+<li>Include security classes</li>
+<li>Include ICPs</li>
+<li>Click <strong>Import</strong></li>
+<li>Review results</li>
+</ol>
+<h2 id="rules-and-calculations">Rules and Calculations</h2>
+<h3 id="hfm-rules-management">HFM Rules Management</h3>
+<div class="language-properties highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="c1"># Rules Configuration</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="na">hfm.rules.enabled</span><span class="o">=</span><span class="s">true</span>
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="na">hfm.rules.path</span><span class="o">=</span><span class="s">D:</span><span class="se">\H</span><span class="s">FM</span><span class="se">\R</span><span class="s">ules</span>
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="na">hfm.rules.backup.before.load</span><span class="o">=</span><span class="s">true</span>
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="na">hfm.rules.validate.before.load</span><span class="o">=</span><span class="s">true</span>
+</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="na">hfm.rules.compile.after.load</span><span class="o">=</span><span class="s">true</span>
+</span></code></pre></div>
+<h3 id="calculation-scripts">Calculation Scripts</h3>
+<div class="language-properties highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="c1"># Calculation Settings</span>
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="na">hfm.calc.enabled</span><span class="o">=</span><span class="s">true</span>
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="na">hfm.calc.default.scenario</span><span class="o">=</span><span class="s">Actual</span>
+</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="na">hfm.calc.default.year</span><span class="o">=</span><span class="s">2024</span>
+</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="na">hfm.calc.default.period</span><span class="o">=</span><span class="s">January</span>
+</span><span id="__span-13-6"><a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="na">hfm.calc.timeout</span><span class="o">=</span><span class="s">1800</span>
+</span></code></pre></div>
+<h2 id="security-configuration">Security Configuration</h2>
+<h3 id="hfm-security-classes">HFM Security Classes</h3>
+<div class="language-properties highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="c1"># Security Class Management</span>
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="na">hfm.security.class.enabled</span><span class="o">=</span><span class="s">true</span>
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="na">hfm.security.class.import</span><span class="o">=</span><span class="s">true</span>
+</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="na">hfm.security.class.deploy</span><span class="o">=</span><span class="s">true</span>
+</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="na">hfm.security.class.sync.with.ad</span><span class="o">=</span><span class="s">true</span>
+</span></code></pre></div>
+<h3 id="user-provisioning">User Provisioning</h3>
+<div class="language-properties highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="c1"># User Provisioning</span>
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="na">hfm.user.provisioning.enabled</span><span class="o">=</span><span class="s">true</span>
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="na">hfm.user.provisioning.method</span><span class="o">=</span><span class="s">NATIVE</span>
+</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="na">hfm.user.default.security.class</span><span class="o">=</span><span class="s">DefaultClass</span>
+</span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="na">hfm.user.sync.with.shared.services</span><span class="o">=</span><span class="s">true</span>
+</span></code></pre></div>
+<h2 id="data-management">Data Management</h2>
+<h3 id="data-extract-configuration">Data Extract Configuration</h3>
+<div class="language-properties highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="c1"># Data Extract Settings</span>
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="na">hfm.data.extract.enabled</span><span class="o">=</span><span class="s">true</span>
+</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="na">hfm.data.extract.format</span><span class="o">=</span><span class="s">COMMA_DELIMITED</span>
+</span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="na">hfm.data.extract.path</span><span class="o">=</span><span class="s">D:</span><span class="se">\H</span><span class="s">FM</span><span class="se">\E</span><span class="s">xtracts</span>
+</span><span id="__span-16-5"><a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a><span class="na">hfm.data.extract.compress</span><span class="o">=</span><span class="s">true</span>
+</span></code></pre></div>
+<h3 id="data-load-configuration">Data Load Configuration</h3>
+<div class="language-properties highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="c1"># Data Load Settings</span>
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="na">hfm.data.load.enabled</span><span class="o">=</span><span class="s">false</span>
+</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="na">hfm.data.load.format</span><span class="o">=</span><span class="s">COMMA_DELIMITED</span>
+</span><span id="__span-17-4"><a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a><span class="na">hfm.data.load.path</span><span class="o">=</span><span class="s">D:</span><span class="se">\H</span><span class="s">FM</span><span class="se">\D</span><span class="s">ataFiles</span>
+</span><span id="__span-17-5"><a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a><span class="na">hfm.data.load.validate</span><span class="o">=</span><span class="s">true</span>
+</span><span id="__span-17-6"><a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a><span class="na">hfm.data.load.replace</span><span class="o">=</span><span class="s">false</span>
+</span></code></pre></div>
+<h2 id="journal-management">Journal Management</h2>
+<h3 id="journal-configuration">Journal Configuration</h3>
+<div class="language-properties highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="c1"># Journal Settings</span>
+</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="na">hfm.journal.enabled</span><span class="o">=</span><span class="s">true</span>
+</span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="na">hfm.journal.auto.approve</span><span class="o">=</span><span class="s">false</span>
+</span><span id="__span-18-4"><a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a><span class="na">hfm.journal.require.attachment</span><span class="o">=</span><span class="s">true</span>
+</span><span id="__span-18-5"><a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a><span class="na">hfm.journal.audit.enabled</span><span class="o">=</span><span class="s">true</span>
+</span></code></pre></div>
+<h2 id="consolidation-settings">Consolidation Settings</h2>
+<h3 id="configure-consolidation">Configure Consolidation</h3>
+<div class="language-properties highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="c1"># Consolidation Configuration</span>
+</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="na">hfm.consolidation.enabled</span><span class="o">=</span><span class="s">true</span>
+</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="na">hfm.consolidation.method</span><span class="o">=</span><span class="s">PROPORTIONAL</span>
+</span><span id="__span-19-4"><a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a><span class="na">hfm.consolidation.auto.after.load</span><span class="o">=</span><span class="s">false</span>
+</span><span id="__span-19-5"><a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a><span class="na">hfm.consolidation.force.translate</span><span class="o">=</span><span class="s">true</span>
+</span><span id="__span-19-6"><a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a><span class="na">hfm.consolidation.force.calculate</span><span class="o">=</span><span class="s">true</span>
+</span></code></pre></div>
+<h2 id="validation-and-testing">Validation and Testing</h2>
+<h3 id="test-hfm-connection">Test HFM Connection</h3>
+<ol>
+<li>Navigate to <strong>Configuration → Applications</strong></li>
+<li>Select HFM application</li>
+<li>Click <strong>Test Connection</strong></li>
+<li>Verify:</li>
+<li>Server connectivity</li>
+<li>Authentication</li>
+<li>Application access</li>
+<li>API availability</li>
+</ol>
+<h3 id="validation-checklist">Validation Checklist</h3>
+<ul>
+<li>[ ] reg.properties file in place</li>
+<li>[ ] Cygwin installed (Windows)</li>
+<li>[ ] HFM services running</li>
+<li>[ ] Authentication working</li>
+<li>[ ] Metadata import successful</li>
+<li>[ ] Rules loading correctly</li>
+</ul>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<h3 id="common-issues">Common Issues</h3>
+<p><strong>reg.properties Not Found</strong>
+</p><div class="language-text highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>Error: Cannot locate reg.properties file
+</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>Solution: Copy file to epmsystem1 directory
+</span></code></pre></div><p></p>
+<p><strong>HFM Connection Failed</strong>
+</p><div class="language-text highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>Error: Unable to connect to HFM application
+</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>Solution: Verify HFM services are running
+</span></code></pre></div><p></p>
+<p><strong>Authentication Error</strong>
+</p><div class="language-text highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>Error: Invalid credentials for HFM
+</span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a>Solution: Verify username and password
+</span></code></pre></div><p></p>
+<p><strong>Metadata Load Failed</strong>
+</p><div class="language-text highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>Error: Failed to load metadata to HFM
+</span><span id="__span-23-2"><a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a>Solution: Check dimension mapping and data format
+</span></code></pre></div><p></p>
+<h3 id="debug-logging">Debug Logging</h3>
+<p>Enable debug logging for HFM:</p>
+<div class="language-properties highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="c1"># Debug Settings</span>
+</span><span id="__span-24-2"><a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a><span class="na">debug.hfm.enabled</span><span class="o">=</span><span class="s">true</span>
+</span><span id="__span-24-3"><a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a><span class="na">debug.hfm.connection</span><span class="o">=</span><span class="s">true</span>
+</span><span id="__span-24-4"><a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a><span class="na">debug.hfm.metadata.operations</span><span class="o">=</span><span class="s">true</span>
+</span><span id="__span-24-5"><a id="__codelineno-24-5" name="__codelineno-24-5" href="#__codelineno-24-5"></a><span class="na">debug.hfm.api.calls</span><span class="o">=</span><span class="s">true</span>
+</span><span id="__span-24-6"><a id="__codelineno-24-6" name="__codelineno-24-6" href="#__codelineno-24-6"></a><span class="na">debug.hfm.rules</span><span class="o">=</span><span class="s">true</span>
+</span></code></pre></div>
+<h3 id="log-file-locations">Log File Locations</h3>
+<table>
+<thead>
+<tr>
+<th>Log File</th>
+<th>Location</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HFM.log</td>
+<td>Oracle\diagnostics\logs</td>
+<td>HFM application log</td>
+</tr>
+<tr>
+<td>HFMWeb.log</td>
+<td>Oracle\diagnostics\logs</td>
+<td>Web tier log</td>
+</tr>
+<tr>
+<td>EPMware.log</td>
+<td>\opt\epmware\logs</td>
+<td>EPMware operations</td>
+</tr>
+<tr>
+<td>Agent.log</td>
+<td>\opt\epmware\agent\logs</td>
+<td>Agent operations</td>
+</tr>
+</tbody>
+</table>
+<h2 id="performance-optimization">Performance Optimization</h2>
+<h3 id="connection-pool-tuning">Connection Pool Tuning</h3>
+<div class="language-properties highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="c1"># Connection Pool Optimization</span>
+</span><span id="__span-25-2"><a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a><span class="na">hfm.pool.min.size</span><span class="o">=</span><span class="s">5</span>
+</span><span id="__span-25-3"><a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a><span class="na">hfm.pool.max.size</span><span class="o">=</span><span class="s">20</span>
+</span><span id="__span-25-4"><a id="__codelineno-25-4" name="__codelineno-25-4" href="#__codelineno-25-4"></a><span class="na">hfm.pool.increment</span><span class="o">=</span><span class="s">5</span>
+</span><span id="__span-25-5"><a id="__codelineno-25-5" name="__codelineno-25-5" href="#__codelineno-25-5"></a><span class="na">hfm.pool.timeout</span><span class="o">=</span><span class="s">300</span>
+</span><span id="__span-25-6"><a id="__codelineno-25-6" name="__codelineno-25-6" href="#__codelineno-25-6"></a><span class="na">hfm.pool.validation.query</span><span class="o">=</span><span class="s">SELECT 1</span>
+</span></code></pre></div>
+<h3 id="metadata-load-optimization">Metadata Load Optimization</h3>
+<div class="language-properties highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="c1"># Load Optimization</span>
+</span><span id="__span-26-2"><a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a><span class="na">hfm.load.batch.size</span><span class="o">=</span><span class="s">1000</span>
+</span><span id="__span-26-3"><a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a><span class="na">hfm.load.parallel.threads</span><span class="o">=</span><span class="s">4</span>
+</span><span id="__span-26-4"><a id="__codelineno-26-4" name="__codelineno-26-4" href="#__codelineno-26-4"></a><span class="na">hfm.load.use.bulk.api</span><span class="o">=</span><span class="s">true</span>
+</span><span id="__span-26-5"><a id="__codelineno-26-5" name="__codelineno-26-5" href="#__codelineno-26-5"></a><span class="na">hfm.load.disable.validation</span><span class="o">=</span><span class="s">false</span>
+</span></code></pre></div>
+<h2 id="best-practices">Best Practices</h2>
+<ol>
+<li><strong>reg.properties Management</strong></li>
+<li>Backup before changes</li>
+<li>Verify after EPM patches</li>
+<li>
+<p>Keep synchronized across servers</p>
+</li>
+<li>
+<p><strong>Metadata Management</strong></p>
+</li>
+<li>Regular metadata validation</li>
+<li>Incremental updates preferred</li>
+<li>
+<p>Backup before major changes</p>
+</li>
+<li>
+<p><strong>Performance</strong></p>
+</li>
+<li>Monitor connection pool usage</li>
+<li>Optimize batch sizes</li>
+<li>
+<p>Schedule loads during off-hours</p>
+</li>
+<li>
+<p><strong>Security</strong></p>
+</li>
+<li>Regular security class reviews</li>
+<li>Audit user access</li>
+<li>Implement segregation of duties</li>
+</ol>
+<h2 id="next-steps">Next Steps</h2>
+<p>After configuring HFM:</p>
+<ol>
+<li>Test metadata import</li>
+<li>Configure deployment schedules</li>
+<li>Set up workflows</li>
+<li>Implement monitoring</li>
+</ol>
+<hr>
+<p>© 2025 EPMware, Inc. All rights reserved.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer">
+        
+          
+          <a href="../planning/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Planning Classic">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Planning Classic
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../cloud/" class="md-footer__link md-footer__link--next" aria-label="Next: Cloud Applications (PCMCS/EPBCS)">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Cloud Applications (PCMCS/EPBCS)
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.indexes", "search.highlight", "search.share", "search.suggest", "content.code.copy", "content.tooltips", "navigation.footer", "toc.follow", "toc.integrate"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>
