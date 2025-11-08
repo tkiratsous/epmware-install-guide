@@ -171,6 +171,8 @@ For Windows installations, set system environment variables:
    ```batch
    echo %JRE_HOME%
    ```
+![Application](../assets/images/jre_home.png)<br/>
+*JRE System Variable*
 
 ## Application Directory Structure
 

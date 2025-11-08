@@ -1,0 +1,1781 @@
+<!DOCTYPE html><html lang="en" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Complete guide for installing and configuring EPMware on-premise deployment">
+      
+      
+        <meta name="author" content="EPMware, Inc.">
+      
+      
+        <link rel="canonical" href="https://install-guide.epmware.com/requirements/">
+      
+      
+        <link rel="prev" href="../getting-started/">
+      
+      
+        <link rel="next" href="../database/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+    
+    
+      
+        <title>System Requirements - EPMware On-Premise Installation Guide</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/css/custom.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#system-requirements" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="EPMware On-Premise Installation Guide" class="md-header__button md-logo" aria-label="EPMware On-Premise Installation Guide" data-md-component="logo">
+      
+  <img src="../assets/images/epmware-logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            EPMware On-Premise Installation Guide
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              System Requirements
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="orange" aria-label="Switch to dark mode" type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="orange" aria-label="Switch to light mode" type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"></path></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="EPMware On-Premise Installation Guide" class="md-nav__button md-logo" aria-label="EPMware On-Premise Installation Guide" data-md-component="logo">
+      
+  <img src="../assets/images/epmware-logo.png" alt="logo">
+
+    </a>
+    EPMware On-Premise Installation Guide
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://docs.epmware.com" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Documentation Center
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Installation Guide Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Getting Started
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    System Requirements
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    System Requirements
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#hardware-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hardware Requirements
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Hardware Requirements">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#application-server-recommendations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Application Server Recommendations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#database-server-recommendations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Database Server Recommendations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#client-workstation-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Client Workstation Requirements
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#software-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Software Requirements
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Software Requirements">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#operating-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Operating Systems
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#database-software" class="md-nav__link">
+    <span class="md-ellipsis">
+      Database Software
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#java-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Java Requirements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jython-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Jython Requirements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#webapplication-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      Web/Application Server
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#additional-software-for-windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      Additional Software for Windows
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#network-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Network Requirements
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Network Requirements">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#port-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Port Requirements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#network-connectivity-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Network Connectivity Requirements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#firewall-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Firewall Configuration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#target-application-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Target Application Requirements
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Target Application Requirements">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#oracle-hyperion-planning-classic" class="md-nav__link">
+    <span class="md-ellipsis">
+      Oracle Hyperion Planning (Classic)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#oracle-hyperion-financial-management-classic" class="md-nav__link">
+    <span class="md-ellipsis">
+      Oracle Hyperion Financial Management (Classic)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#oracle-pcmcsepbcs-cloud" class="md-nav__link">
+    <span class="md-ellipsis">
+      Oracle PCMCS/EPBCS (Cloud)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#oracle-essbase-classic" class="md-nav__link">
+    <span class="md-ellipsis">
+      Oracle Essbase (Classic)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#capacity-planning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Capacity Planning
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Capacity Planning">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#small-environment-100-users" class="md-nav__link">
+    <span class="md-ellipsis">
+      Small Environment (&lt; 100 users)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#medium-environment-100-500-users" class="md-nav__link">
+    <span class="md-ellipsis">
+      Medium Environment (100-500 users)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#large-environment-500-users" class="md-nav__link">
+    <span class="md-ellipsis">
+      Large Environment (&gt; 500 users)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#virtualization-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      Virtualization Support
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#high-availability-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      High Availability Considerations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Next Steps
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5">
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../database/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Database Installation
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Database Installation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../database/oracle-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Oracle Database Setup
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../database/database-objects/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Database Objects
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6">
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../app-server/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Application Server Setup
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Application Server Setup
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../app-server/tomcat/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tomcat Configuration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../app-server/windows/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Windows Components
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7">
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../application/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    EPMware Application
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7" id="__nav_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            EPMware Application
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../application/settings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Application Settings
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8">
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../targets/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Target Applications
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_8" id="__nav_8_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Target Applications
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../targets/planning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Planning Classic
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../targets/hfm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Hyperion HFM
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../targets/cloud/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cloud Applications (PCMCS/EPBCS)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../agent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Agent Installation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../post-install/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Post-Installation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Troubleshooting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12">
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../appendices/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Appendices
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_12" id="__nav_12_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12">
+            <span class="md-nav__icon md-icon"></span>
+            Appendices
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../appendices/scripts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Installation Scripts
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../appendices/configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Configuration Reference
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../appendices/migration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Migration Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="system-requirements">System Requirements</h1>
+<p>This section details the hardware, software, and network requirements for EPMware on-premise installation.</p>
+<h2 id="hardware-requirements">Hardware Requirements</h2>
+<h3 id="application-server-recommendations">Application Server Recommendations</h3>
+<p>The EPMware application server hosts the main EPMware application and requires the following specifications:</p>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Minimum Requirements</th>
+<th>Recommended</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Processor</strong></td>
+<td>2 CPU x64 Intel/AMD</td>
+<td>4+ CPU x64 Intel/AMD</td>
+</tr>
+<tr>
+<td><strong>Memory (RAM)</strong></td>
+<td>16 GB</td>
+<td>32 GB or higher</td>
+</tr>
+<tr>
+<td><strong>Hard Disk Space</strong></td>
+<td>60 GB</td>
+<td>100 GB+ SSD</td>
+</tr>
+<tr>
+<td><strong>Network</strong></td>
+<td>1 Gbps</td>
+<td>10 Gbps</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Performance Considerations:</strong>
+- Additional CPUs improve concurrent request processing
+- More RAM allows for larger data processing and caching
+- SSD storage recommended for improved I/O performance
+- Network speed impacts metadata deployment times</p>
+<h3 id="database-server-recommendations">Database Server Recommendations</h3>
+<p>The database server hosts the EPMware repository and requires:</p>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Minimum Requirements</th>
+<th>Recommended</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Processor</strong></td>
+<td>4 CPU x64 Intel/AMD</td>
+<td>8+ CPU x64 Intel/AMD</td>
+</tr>
+<tr>
+<td><strong>Memory (RAM)</strong></td>
+<td>32 GB</td>
+<td>64 GB or higher</td>
+</tr>
+<tr>
+<td><strong>Hard Disk Space</strong></td>
+<td>60 GB</td>
+<td>200 GB+ SSD</td>
+</tr>
+<tr>
+<td><strong>Network</strong></td>
+<td>1 Gbps</td>
+<td>10 Gbps</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Sizing Guidelines:</strong>
+- Database size grows with metadata complexity and history
+- Plan for 3-5 years of data growth
+- Consider backup and archive storage requirements
+- High-speed storage critical for database performance</p>
+<h3 id="client-workstation-requirements">Client Workstation Requirements</h3>
+<p>End users access EPMware through web browsers with these minimum requirements:</p>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Requirements</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Operating System</strong></td>
+<td>Windows 8/10/11, macOS, Linux</td>
+</tr>
+<tr>
+<td><strong>Web Browser</strong></td>
+<td>Chrome (recommended), Firefox, Edge, Safari</td>
+</tr>
+<tr>
+<td><strong>Screen Resolution</strong></td>
+<td>1920x1080 minimum</td>
+</tr>
+<tr>
+<td><strong>Network</strong></td>
+<td>Broadband internet connection</td>
+</tr>
+</tbody>
+</table>
+<h2 id="software-requirements">Software Requirements</h2>
+<h3 id="operating-systems">Operating Systems</h3>
+<p><strong>Application Server Supported OS:</strong>
+- <strong>Linux (Recommended for Production)</strong>
+  - Red Hat Enterprise Linux 7.x, 8.x
+  - Oracle Linux 7.x, 8.x
+  - CentOS 7.x, 8.x
+  - Ubuntu Server 18.04 LTS, 20.04 LTS</p>
+<ul>
+<li><strong>Windows Server</strong></li>
+<li>Windows Server 2016</li>
+<li>Windows Server 2019</li>
+<li>Windows Server 2022</li>
+</ul>
+<p><strong>Database Server Supported OS:</strong>
+- Same as Application Server
+- Linux recommended for production databases</p>
+<h3 id="database-software">Database Software</h3>
+<p><strong>Oracle Database Versions:</strong>
+- Oracle Database 11g Release 2 (11.2.0.4)
+- Oracle Database 12c Release 1 &amp; 2
+- Oracle Database 19c (recommended)
+- Oracle Database 21c</p>
+<p><strong>Database Editions:</strong>
+- Standard Edition
+- Standard Edition One
+- Standard Edition Two
+- Enterprise Edition (recommended for production)</p>
+<p><strong>Required Database Features:</strong>
+- Partitioning (optional but recommended)
+- Advanced Security (optional)
+- Real Application Clusters - RAC (optional for HA)</p>
+<h3 id="java-requirements">Java Requirements</h3>
+<p><strong>Java Development Kit (JDK) or Runtime Environment (JRE):</strong>
+- Java 8 (1.8.x) - Minimum version 1.8.0_171
+- Java 11 - Supported
+- OpenJDK or Oracle JDK</p>
+<p><strong>Configuration:</strong>
+- JAVA_HOME environment variable must be set
+- Java bin directory must be in system PATH</p>
+<h3 id="jython-requirements">Jython Requirements</h3>
+<p><strong>Version:</strong>
+- Jython 2.7.2 or later (latest stable version recommended)</p>
+<p><strong>Installation:</strong>
+- Download from <a href="http://www.jython.org">www.jython.org</a>
+- Standalone installation type recommended</p>
+<p><strong>Configuration:</strong>
+- Jython bin folder must be in system PATH
+- On Windows: Add to system environment variables</p>
+<h3 id="webapplication-server">Web/Application Server</h3>
+<p><strong>Apache Tomcat Versions:</strong>
+- Tomcat 8.0.44 (minimum)
+- Tomcat 8.5.x (recommended)
+- Tomcat 9.0.x (supported)</p>
+<p><strong>Tomcat Requirements:</strong>
+- Minimum heap size: 8 GB
+- Maximum heap size: 12 GB
+- HTTP/HTTPS connectors configured</p>
+<h3 id="additional-software-for-windows">Additional Software for Windows</h3>
+<p><strong>Cygwin (Windows only):</strong>
+- Required for Windows installations
+- Latest stable version
+- Base packages plus SSH utilities</p>
+<p><strong>Windows Service Wrapper:</strong>
+- For running Tomcat as Windows service
+- Included with Tomcat installation</p>
+<h2 id="network-requirements">Network Requirements</h2>
+<h3 id="port-requirements">Port Requirements</h3>
+<p>Ensure the following ports are open and available:</p>
+<table>
+<thead>
+<tr>
+<th>Service</th>
+<th>Default Port</th>
+<th>Protocol</th>
+<th>Direction</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>EPMware Application</td>
+<td>8080</td>
+<td>HTTP</td>
+<td>Inbound</td>
+<td>Can be configured</td>
+</tr>
+<tr>
+<td>EPMware Application (SSL)</td>
+<td>8443</td>
+<td>HTTPS</td>
+<td>Inbound</td>
+<td>Recommended for production</td>
+</tr>
+<tr>
+<td>Oracle Database</td>
+<td>1521</td>
+<td>TCP</td>
+<td>Bidirectional</td>
+<td>Default Oracle port</td>
+</tr>
+<tr>
+<td>EPM Applications</td>
+<td>Various</td>
+<td>HTTP/HTTPS</td>
+<td>Outbound</td>
+<td>Target application specific</td>
+</tr>
+<tr>
+<td>SMTP Server</td>
+<td>25/587</td>
+<td>TCP</td>
+<td>Outbound</td>
+<td>For email notifications</td>
+</tr>
+<tr>
+<td>LDAP/Active Directory</td>
+<td>389/636</td>
+<td>TCP/LDAPS</td>
+<td>Outbound</td>
+<td>For authentication</td>
+</tr>
+</tbody>
+</table>
+<h3 id="network-connectivity-requirements">Network Connectivity Requirements</h3>
+<p><strong>Between Components:</strong>
+- Application Server ↔ Database Server: &lt; 1ms latency recommended
+- Application Server ↔ Target EPM Apps: &lt; 10ms latency
+- Application Server ↔ EPMware Agents: Persistent connection
+- Client Browsers ↔ Application Server: &lt; 100ms latency</p>
+<p><strong>Bandwidth Requirements:</strong>
+- Minimum: 100 Mbps between servers
+- Recommended: 1 Gbps or higher
+- Consider metadata file sizes for deployment</p>
+<h3 id="firewall-configuration">Firewall Configuration</h3>
+<p>Configure firewall rules to allow:</p>
+<ol>
+<li><strong>Inbound to Application Server:</strong></li>
+<li>HTTP/HTTPS from client subnets</li>
+<li>
+<p>Agent communication ports</p>
+</li>
+<li>
+<p><strong>Outbound from Application Server:</strong></p>
+</li>
+<li>Database connection</li>
+<li>Target EPM applications</li>
+<li>SMTP server</li>
+<li>
+<p>LDAP/AD servers</p>
+</li>
+<li>
+<p><strong>Database Server:</strong></p>
+</li>
+<li>Accept connections from Application Server</li>
+<li>Backup network access if required</li>
+</ol>
+<h2 id="target-application-requirements">Target Application Requirements</h2>
+<h3 id="oracle-hyperion-planning-classic">Oracle Hyperion Planning (Classic)</h3>
+<p><strong>Supported Versions:</strong>
+- Planning 11.1.2.4.x
+- Planning 11.2.x</p>
+<p><strong>Requirements:</strong>
+- LCM Administrator role for EPMware user
+- Password file generation capability
+- EPM instance accessible via HTTP/HTTPS</p>
+<h3 id="oracle-hyperion-financial-management-classic">Oracle Hyperion Financial Management (Classic)</h3>
+<p><strong>Supported Versions:</strong>
+- HFM 11.1.2.4.x
+- HFM 11.2.x</p>
+<p><strong>Requirements:</strong>
+- HFM administrator access
+- reg.properties file access
+- Windows-based HFM server requires Cygwin</p>
+<h3 id="oracle-pcmcsepbcs-cloud">Oracle PCMCS/EPBCS (Cloud)</h3>
+<p><strong>Supported Versions:</strong>
+- All current PCMCS versions
+- All current EPBCS versions</p>
+<p><strong>Requirements:</strong>
+- EPMAutomate utility
+- Service Administrator role
+- Internet connectivity
+- Valid SSL certificates</p>
+<h3 id="oracle-essbase-classic">Oracle Essbase (Classic)</h3>
+<p><strong>Supported Versions:</strong>
+- Essbase 11.1.2.4.x
+- Essbase 19c
+- Essbase 21c</p>
+<p><strong>Requirements:</strong>
+- Essbase administrator access
+- MaxL script execution capability</p>
+<h2 id="capacity-planning">Capacity Planning</h2>
+<h3 id="small-environment-100-users">Small Environment (&lt; 100 users)</h3>
+<ul>
+<li>Single application server</li>
+<li>Single database server</li>
+<li>1-2 EPMware agents</li>
+<li>Basic specifications sufficient</li>
+</ul>
+<h3 id="medium-environment-100-500-users">Medium Environment (100-500 users)</h3>
+<ul>
+<li>Single application server (higher specs)</li>
+<li>Dedicated database server</li>
+<li>2-4 EPMware agents</li>
+<li>Consider load balancing</li>
+</ul>
+<h3 id="large-environment-500-users">Large Environment (&gt; 500 users)</h3>
+<ul>
+<li>Multiple application servers (clustered)</li>
+<li>Database with RAC/Data Guard</li>
+<li>4+ EPMware agents</li>
+<li>Load balancer required</li>
+<li>Consider CDN for static content</li>
+</ul>
+<h2 id="virtualization-support">Virtualization Support</h2>
+<p>EPMware supports installation on virtualized environments:</p>
+<p><strong>Supported Platforms:</strong>
+- VMware vSphere 6.x, 7.x
+- Microsoft Hyper-V
+- Oracle VM
+- AWS EC2 instances
+- Azure Virtual Machines
+- Google Cloud Platform VMs</p>
+<p><strong>Best Practices:</strong>
+- Reserve CPU and memory resources
+- Use thick provisioned disks
+- Enable CPU/Memory hot-add
+- Configure anti-affinity rules for HA
+- Regular snapshot schedule</p>
+<h2 id="high-availability-considerations">High Availability Considerations</h2>
+<p>For production environments requiring high availability:</p>
+<p><strong>Application Tier:</strong>
+- Multiple Tomcat instances
+- Hardware/Software load balancer
+- Sticky sessions configured
+- Shared file system for artifacts</p>
+<p><strong>Database Tier:</strong>
+- Oracle RAC for active-active clustering
+- Data Guard for disaster recovery
+- Regular RMAN backups
+- Standby database recommended</p>
+<p><strong>Agent Tier:</strong>
+- Deploy redundant agents
+- Automatic failover configuration
+- Health monitoring</p>
+<div class="admonition warning">
+<p class="admonition-title">Important Notes</p>
+<ul>
+<li>These are minimum requirements; production environments may need higher specifications</li>
+<li>Performance depends on metadata complexity and user concurrency</li>
+<li>Regular monitoring and capacity reviews recommended</li>
+<li>Contact EPMware Support for sizing assistance for large deployments</li>
+</ul>
+</div>
+<h2 id="next-steps">Next Steps</h2>
+<p>After confirming your environment meets these requirements:</p>
+<ol>
+<li>Proceed to <a href="../database/">Database Installation</a></li>
+<li>Prepare installation media and documentation</li>
+<li>Schedule maintenance window if upgrading</li>
+</ol>
+<hr>
+<p>© 2025 EPMware, Inc. All rights reserved.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer">
+        
+          
+          <a href="../getting-started/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Getting Started">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Getting Started
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../database/" class="md-footer__link md-footer__link--next" aria-label="Next: Database Installation">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Database Installation
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.top", "navigation.indexes", "search.highlight", "search.share", "search.suggest", "content.code.copy", "content.tooltips", "navigation.footer", "toc.follow", "toc.integrate"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>

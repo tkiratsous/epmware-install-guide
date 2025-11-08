@@ -75,6 +75,9 @@ Store the password file in a secure location:
 5. Enter the full path to the password file
 6. Save configuration
 
+![Planning](../assets/images/planning-password.png)<br/>
+*Planning Password*
+
 ## LCM Administrator Role
 
 The EPMware service account requires LCM Administrator privileges.
