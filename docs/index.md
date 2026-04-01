@@ -1,66 +1,72 @@
 # EPMware On-Premise Installation Guide
 
-Welcome to the EPMware On-Premise Installation Guide. This comprehensive guide provides step-by-step instructions for installing and configuring EPMware in your on-premise environment.
+# Overview
 
-## About This Guide
+EPMware is a master data management and workflow tool that manages master data and enforces your organization’s workflow around everyday metadata processes.
 
-This guide covers the complete installation process for EPMware version 6.6, including database setup, application server configuration, and integration with various Oracle EPM applications. Whether you're setting up a new environment or upgrading an existing one, this guide provides the detailed instructions you need.
+By configuring shared dimensions in EPMware, users can request metadata once, and the workflow engine routes the request for approvals and deploys it to the participating target systems. This enables standardization and rationalization of metadata as your organization evolves its master data strategy.
 
-!!! info "Version Information"
-    This guide covers EPMware version 6.6, updated October 2022
+## Workflow & Monitoring
 
-## What is EPMware?
+The EPMware dashboard allows users, managers, and administrators to monitor metadata requests in real time. Users can track a request from the **Create** stage through **Review**, **Approve**, and **Deploy** stages.
 
-EPMware is a master data management and workflow tool that manages master data and enforces your organization's workflow around everyday processes that surround metadata changes. By configuring shared dimensions in EPMware, users request metadata once and our workflow engine routes the request to obtain approvals and deploys the metadata to participating target systems.
+A graphical representation of each request helps identify bottlenecks and determine if escalation is required.
 
-### Key Features
 
-- **Master Data Management** - Centralized control of metadata across multiple EPM applications
-- **Workflow Automation** - Built-in workflow engine for routing and approvals
-- **Seamless Integration** - Direct integration with Hyperion EPMA, Classic HFM, Classic Essbase, and Classic Planning
-- **Real-time Dashboard** - Monitor request status and identify bottlenecks
-- **Audit Trail** - Complete transaction logging from request to deployment
-- **Scheduler** - Built-in scheduler for automated deployments
+## Integration & Automation
 
-## Installation Overview
+EPMware provides seamless integration with:
 
-The installation process consists of the following major steps:
+- Hyperion EPMA  
+- Hyperion Financial Management (HFM)  
+- Essbase  
+- Planning applications  
 
-1. **Review System Requirements** - Ensure your environment meets all hardware and software prerequisites
-2. **Install Database** - Set up Oracle database and create EPMware schema
-3. **Configure Application Server** - Install and configure Tomcat Apache
-4. **Deploy EPMware Application** - Install the EPMware WAR file
-5. **Configure Target Applications** - Set up connections to HFM, Planning, and other EPM applications
-6. **Install EPMware Agent** - Deploy agents for communication with target systems
-7. **Verify Installation** - Test connectivity and validate the setup
+This enables automatic metadata deployment without manual intervention or file handling.
 
-## Quick Start Checklist
+Approved metadata can be:
 
-Before beginning the installation, ensure you have:
+  - Automatically deployed  
+  - Scheduled using the built-in scheduler  
 
-- [ ] Oracle Database 11.x or later (Standard or Enterprise Edition)
-- [ ] Java 1.8.x or higher installed
-- [ ] Latest version of Jython
-- [ ] Tomcat Apache 8.0.44 or higher
-- [ ] Administrator access to all systems
-- [ ] Network connectivity between all components
-- [ ] Target EPM applications installed and running
+## Data Visibility & Security
 
-## Supported Configurations
+  - One-click import of target system hierarchies allows users to visualize metadata in production environments  
+  - A configurable security module integrates with LDAP or Microsoft Active Directory (MSAD)  
 
-### Target Applications
-- Oracle Hyperion Financial Management (HFM) - Classic
-- Oracle Hyperion Planning - Classic
-- Oracle Essbase - Classic
-- Oracle PCMCS/EPBCS - Cloud
+## Workflow Builder
 
-### Operating Systems
-- **Linux** (Recommended for production)
-- **Windows Server 2016** or later
+The **Workflow Builder™** enables administrators to design and manage scalable workflows.
 
-### Databases
-- Oracle Database 11.x, 12.x or higher
-- Standard Edition or Enterprise Edition
+Key capabilities include:
+
+  - Task-driven workflows  
+  - Reusable workflow components  
+  - Rule-based validations  
+  - Exception handling  
+  - Email notifications across workflow stages  
+  - Custom scripting and functions for advanced customization  
+
+## Deployment Management
+
+The EPMware deployment module centrally manages metadata deployments.
+
+Features include:
+
+  - On-demand or scheduled deployments  
+  - Batch execution during off-hours  
+  - Real-time monitoring of deployments  
+  - Calendar-based scheduling (daily, weekly, monthly)  
+
+## Audit & Reporting
+
+EPMware maintains a complete audit trail of all transactions from request to deployment.
+
+- Tracks every transaction, approval, and deployment  
+- Provides detailed audit reports  
+- Enables querying of historical data through the Audit module  
+
+
 
 ## Documentation Sections
 

@@ -1,6 +1,6 @@
-/* custom.css - EPMware REST API Guide specific styling */
+/* custom.css - EPMware Logic Builder Guide specific styling */
 
-/* EPMware brand colors and styling (consistent with Logic Builder Guide) */
+/* EPMware brand colors and styling (same as admin guide) */
 :root {
   --epmware-blue: #1976d2;
   --epmware-orange: #ff9800;
@@ -8,9 +8,6 @@
   --epmware-dark-blue: #0d47a1;
   --epmware-code-bg: #f5f5f5;
   --epmware-code-border: #ddd;
-  --epmware-success: #4caf50;
-  --epmware-error: #f44336;
-  --epmware-warning: #ff9800;
 }
 
 /* Custom admonition for EPMware notes */
@@ -33,7 +30,7 @@
   border-color: var(--epmware-orange);
 }
 
-/* Code block styling for REST API examples */
+/* Code block styling for PL/SQL */
 .md-typeset pre {
   background-color: var(--epmware-code-bg);
   border: 1px solid var(--epmware-code-border);
@@ -47,304 +44,178 @@
   font-size: 0.85em;
 }
 
-/* HTTP method badges */
-.http-method {
-  display: inline-block;
-  padding: 0.2em 0.6em;
-  border-radius: 3px;
-  font-size: 0.85em;
-  font-weight: 600;
-  text-transform: uppercase;
-  margin-right: 0.5em;
-  font-family: 'Roboto Mono', monospace;
+/* SQL syntax highlighting enhancements */
+.language-sql .k { /* Keywords */
+  color: #0000ff;
+  font-weight: bold;
 }
 
-.http-method.get {
-  background-color: #e3f2fd;
-  color: #1565c0;
-}
-
-.http-method.post {
-  background-color: #e8f5e9;
-  color: #2e7d32;
-}
-
-.http-method.put {
-  background-color: #fff3e0;
-  color: #e65100;
-}
-
-.http-method.patch {
-  background-color: #fce4ec;
-  color: #c2185b;
-}
-
-.http-method.delete {
-  background-color: #ffebee;
-  color: #c62828;
-}
-
-/* Status code badges */
-.status-code {
-  display: inline-block;
-  padding: 0.2em 0.6em;
-  border-radius: 3px;
-  font-size: 0.85em;
-  font-weight: 500;
-  font-family: 'Roboto Mono', monospace;
-  margin: 0 0.2em;
-}
-
-.status-code.success {
-  background-color: #e8f5e9;
-  color: #2e7d32;
-}
-
-.status-code.error {
-  background-color: #ffebee;
-  color: #c62828;
-}
-
-.status-code.warning {
-  background-color: #fff3e0;
-  color: #e65100;
-}
-
-.status-code.info {
-  background-color: #e3f2fd;
-  color: #1565c0;
-}
-
-/* API endpoint styling */
-.api-endpoint {
-  background-color: #f8f9fa;
-  border: 1px solid #dee2e6;
-  border-radius: 4px;
-  padding: 1rem;
-  margin: 1rem 0;
-  font-family: 'Roboto Mono', monospace;
-  position: relative;
-}
-
-.api-endpoint::before {
-  content: "ENDPOINT";
-  position: absolute;
-  top: -10px;
-  left: 10px;
-  background: white;
-  padding: 0 5px;
-  color: var(--epmware-blue);
-  font-weight: 600;
-  font-size: 0.75em;
-  letter-spacing: 0.5px;
-}
-
-/* Request/Response sections */
-.request-section,
-.response-section {
-  border-left: 3px solid var(--epmware-blue);
-  padding-left: 1rem;
-  margin: 1rem 0;
-}
-
-.request-section h4,
-.response-section h4 {
-  color: var(--epmware-dark-blue);
-  margin-top: 0;
-}
-
-/* JSON syntax highlighting enhancement */
-.language-json .s2 { /* JSON strings */
+.language-sql .s { /* Strings */
   color: #008000;
 }
 
-.language-json .mi { /* JSON numbers */
-  color: #0086b3;
+.language-sql .c { /* Comments */
+  color: #808080;
+  font-style: italic;
 }
 
-.language-json .kc { /* JSON true/false/null */
-  color: #d73a49;
+/* Procedure steps styling */
+.md-typeset ol li {
+  margin-bottom: 0.8em;
 }
 
-/* Bash/curl syntax highlighting */
-.language-bash .s { /* Strings */
-  color: #008000;
+.md-typeset ol li ol {
+  margin-top: 0.5em;
 }
 
-.language-bash .nv { /* Variables */
-  color: #d73a49;
+/* Image captions styling */
+.md-typeset figure figcaption,
+.md-typeset img + em {
+  font-style: italic;
+  color: var(--md-default-fg-color--light);
+  font-size: 0.85rem;
+  margin-top: 0.5rem;
+  display: block;
+  text-align: center;
 }
 
-/* Parameter tables */
-.param-table table {
+/* Added stronger rule for image view */
+.md-typeset img {
+  max-width: 100% !important;
+  page-break-inside: avoid !important;
+  border: 1px solid #444 !important;
+  border-radius: 6px !important;
+  padding: 4px !important;
+  background-color: #fff !important;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15) !important;
+}
+
+/* API parameter tables */
+.api-params table {
   margin: 1rem 0;
 }
 
-.param-table th {
+.api-params th {
   background-color: var(--epmware-light-blue);
   color: var(--epmware-dark-blue);
   font-weight: 600;
   white-space: nowrap;
 }
 
-.param-table td:first-child {
+.api-params td:first-child {
   font-family: 'Roboto Mono', monospace;
   font-size: 0.9em;
   color: var(--epmware-dark-blue);
 }
 
-.param-table td:nth-child(3) {
-  text-align: center;
+/* Script type badges */
+.script-type {
+  display: inline-block;
+  padding: 0.2em 0.6em;
+  border-radius: 3px;
+  font-size: 0.85em;
+  font-weight: 500;
+  margin-right: 0.5em;
 }
 
-/* Required field indicator */
-.required {
-  color: var(--epmware-error);
-  font-weight: bold;
+.script-type.dimension-mapping {
+  background-color: #e3f2fd;
+  color: #1565c0;
 }
 
-/* Optional field indicator */
-.optional {
-  color: #666;
-  font-style: italic;
+.script-type.property-validation {
+  background-color: #f3e5f5;
+  color: #7b1fa2;
 }
 
-/* Module cards on homepage */
-.module-card {
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
-  padding: 1.5rem;
+.script-type.workflow {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+}
+
+.script-type.deployment {
+  background-color: #fff3e0;
+  color: #e65100;
+}
+
+/* Status icons and legends */
+.status-legend {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
   margin: 1rem 0;
-  transition: box-shadow 0.3s, transform 0.3s;
+  padding: 0.5rem;
+  background-color: var(--md-code-bg-color);
+  border-radius: 0.2rem;
 }
 
-.module-card:hover {
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  transform: translateY(-2px);
+.status-icon {
+  width: 1.2rem;
+  height: 1.2rem;
+  display: inline-block;
 }
 
-.module-card h3 {
+/* Field reference tables */
+.field-reference table {
+  margin: 1rem 0;
+}
+
+.field-reference th {
+  background-color: var(--epmware-light-blue);
+  color: var(--epmware-dark-blue);
+  font-weight: 600;
+}
+
+/* Input/Output parameter sections */
+.param-section {
+  border-left: 3px solid var(--epmware-blue);
+  padding-left: 1rem;
+  margin: 1rem 0;
+}
+
+.param-section h4 {
   color: var(--epmware-dark-blue);
   margin-top: 0;
 }
 
-/* API testing section */
-.try-it-out {
-  background-color: #f0f7ff;
-  border: 1px solid var(--epmware-blue);
-  border-radius: 4px;
-  padding: 1rem;
-  margin: 1.5rem 0;
+/* Example code blocks */
+.example-code {
   position: relative;
+  margin: 1.5rem 0;
 }
 
-.try-it-out::before {
-  content: "TRY IT OUT";
+.example-code::before {
+  content: "Example";
   position: absolute;
   top: -10px;
   left: 10px;
-  background: #f0f7ff;
-  padding: 0 8px;
+  background: white;
+  padding: 0 5px;
   color: var(--epmware-blue);
-  font-weight: 600;
-  font-size: 0.8em;
+  font-weight: 500;
+  font-size: 0.85em;
 }
 
-/* Response example boxes */
-.response-example {
+/* API function signatures */
+.api-signature {
   background-color: #f8f8f8;
   border: 1px solid #e0e0e0;
   border-radius: 4px;
   padding: 1rem;
   margin: 1rem 0;
-  position: relative;
-}
-
-.response-example.success {
-  border-left: 4px solid var(--epmware-success);
-}
-
-.response-example.error {
-  border-left: 4px solid var(--epmware-error);
-}
-
-/* Tabs for code examples in different languages */
-.md-typeset .tabbed-labels {
-  border-bottom: 2px solid var(--epmware-blue);
-}
-
-.md-typeset .tabbed-labels label {
-  color: var(--epmware-dark-blue);
-  font-weight: 500;
-}
-
-.md-typeset .tabbed-labels label:hover {
-  color: var(--epmware-orange);
-}
-
-/* Authentication token display */
-.token-display {
-  background-color: #f5f5f5;
-  border: 1px dashed #999;
-  border-radius: 4px;
-  padding: 0.5rem 1rem;
   font-family: 'Roboto Mono', monospace;
   font-size: 0.9em;
-  word-break: break-all;
-  margin: 1rem 0;
 }
 
-/* Security warning boxes */
-.security-warning {
-  background-color: #fff3e0;
-  border: 2px solid var(--epmware-warning);
-  border-radius: 4px;
-  padding: 1rem;
-  margin: 1.5rem 0;
+/* Hide navigation scrollbar to prevent flash */
+.md-sidebar--primary .md-sidebar__scrollwrap {
+  overflow-y: auto;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
 }
 
-.security-warning::before {
-  content: "âš ï¸ ";
-  font-size: 1.2em;
-}
-
-/* API flow diagrams */
-.api-flow {
-  background-color: white;
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
-  padding: 2rem;
-  margin: 2rem 0;
-  text-align: center;
-}
-
-.api-flow .step {
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  background-color: var(--epmware-light-blue);
-  border-radius: 4px;
-  margin: 0.5rem;
-  font-weight: 500;
-}
-
-.api-flow .arrow {
-  display: inline-block;
-  margin: 0 0.5rem;
-  color: var(--epmware-blue);
-  font-size: 1.5em;
-}
-
-/* Quick reference cards */
-.quick-ref {
-  background-color: #fafafa;
-  border-left: 4px solid var(--epmware-orange);
-  padding: 1rem;
-  margin: 1rem 0;
-}
-
-.quick-ref h4 {
-  color: var(--epmware-dark-blue);
-  margin-top: 0;
+.md-sidebar--primary .md-sidebar__scrollwrap::-webkit-scrollbar {
+  display: none; /* Chrome/Safari/Opera */
 }
 
 /* Print-friendly styles */
@@ -363,13 +234,9 @@
     max-width: none !important;
   }
   
-  /* Ensure code blocks print well */
-  pre {
-    page-break-inside: avoid;
-  }
-  
-  /* Keep tables together */
-  table {
+  /* Ensure images print well */
+  img {
+    max-width: 100% !important;
     page-break-inside: avoid;
   }
   
@@ -381,16 +248,17 @@
   h1:first-child {
     page-break-before: avoid;
   }
+  
+  /* Keep code blocks together */
+  pre {
+    page-break-inside: avoid;
+  }
 }
 
-/* Mobile optimizations */
+/* Mobile optimizations for field reference */
 @media (max-width: 768px) {
-  .api-endpoint {
-    font-size: 0.8rem;
-    padding: 0.5rem;
-  }
-  
-  .param-table table {
+  .field-reference table,
+  .api-params table {
     font-size: 0.85rem;
   }
   
@@ -398,13 +266,14 @@
     padding: 0.5rem 0.3rem;
   }
   
-  .http-method,
-  .status-code {
-    font-size: 0.75em;
-    padding: 0.1em 0.4em;
+  .api-signature {
+    font-size: 0.8em;
+    padding: 0.5rem;
   }
 }
 
+
+-----
 /* Copy button styling for code blocks */
 .md-clipboard {
   color: var(--epmware-blue);
@@ -420,7 +289,71 @@
   color: white;
 }
 
-/* Navigation enhancement for API modules */
+/* Logic Builder specific icons */
+.lb-icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  vertical-align: middle;
+  margin-right: 0.3em;
+}
+
+.lb-icon.script {
+  color: var(--epmware-blue);
+}
+
+.lb-icon.api {
+  color: var(--epmware-orange);
+}
+
+/* Syntax highlighting for PL/SQL specific constructs */
+.language-sql .n { /* Names/Identifiers */
+  color: #333;
+}
+
+.language-sql .o { /* Operators */
+  color: #666;
+}
+
+/* Collapsible sections for long code examples */
+details.code-details {
+  border: 1px solid var(--epmware-code-border);
+  border-radius: 4px;
+  margin: 1rem 0;
+  padding: 0;
+}
+
+details.code-details summary {
+  background-color: var(--epmware-light-blue);
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-weight: 500;
+  color: var(--epmware-dark-blue);
+}
+
+details.code-details summary:hover {
+  background-color: #d1e7fd;
+}
+
+details.code-details pre {
+  margin: 0;
+  border: none;
+  border-radius: 0;
+}
+
+/* Action code badges */
+.action-code {
+  display: inline-block;
+  padding: 0.1em 0.4em;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 0.85em;
+  margin: 0 0.2em;
+}
+
+/* Navigation enhancement for script types */
 .md-nav__item--nested > .md-nav__link::after {
   color: var(--epmware-blue);
 }
@@ -436,63 +369,48 @@
   transform: translateY(-2px);
 }
 
-/* Rate limit indicator */
-.rate-limit {
-  display: inline-block;
-  padding: 0.2em 0.6em;
-  background-color: #f0f0f0;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-  font-family: 'Roboto Mono', monospace;
-  font-size: 0.85em;
-  margin: 0 0.2em;
+/* ----------------------------------------------------
+   Paragraph formatting: justification + clean right edge
+   ---------------------------------------------------- */
+
+/* Full justification for paragraphs, list items, and table text */
+.md-typeset p,
+.md-typeset li,
+.md-typeset td,
+.md-typeset th {
+    text-align: justify;           /* clean left + right alignment */
+    text-justify: inter-word;      /* evenly distribute words */
+    hyphens: none ;                 /* prevents large spacing gaps */
+    -webkit-hyphens: none ;
+    -ms-hyphens: none ;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif !important;
+    font-size: 0.77rem;            /* consistent paragraph font size */
+    line-height: 1.55;             /* professional document spacing */
 }
 
-/* API version badge */
-.api-version {
-  display: inline-block;
-  padding: 0.3em 0.8em;
-  background-color: var(--epmware-light-blue);
-  color: var(--epmware-dark-blue);
-  border-radius: 3px;
-  font-weight: 500;
-  font-size: 0.9em;
-  margin-left: 0.5em;
+/* Keep headings left-aligned */
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3,
+.md-typeset h4,
+.md-typeset h5,
+.md-typeset h6 {
+    text-align: left !important;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif !important;
 }
 
-/* Collapsible sections for long examples */
-details.api-details {
-  border: 1px solid var(--epmware-code-border);
-  border-radius: 4px;
-  margin: 1rem 0;
-  padding: 0;
+
+/* Reduce table text size only (not headings, not paragraphs) */
+.md-typeset table:not([class]) td,
+.md-typeset table:not([class]) th {
+    font-size: 0.70rem !important;
+    line-height: 1.4;
 }
 
-details.api-details summary {
-  background-color: var(--epmware-light-blue);
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-  font-weight: 500;
-  color: var(--epmware-dark-blue);
+
+/* docs/stylesheets/extra.css */
+.icon-blue svg {
+  color: #1e88e5;   /* Material Blue */
 }
 
-details.api-details summary:hover {
-  background-color: #d1e7fd;
-}
 
-details.api-details pre {
-  margin: 0;
-  border: none;
-  border-radius: 0;
-}
-
-/* Hide navigation scrollbar */
-.md-sidebar--primary .md-sidebar__scrollwrap {
-  overflow-y: auto;
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* IE/Edge */
-}
-
-.md-sidebar--primary .md-sidebar__scrollwrap::-webkit-scrollbar {
-  display: none; /* Chrome/Safari/Opera */
-}

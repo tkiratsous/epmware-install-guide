@@ -81,39 +81,32 @@ nav:
   
   - Getting Started: getting-started/index.md
   
-  - System Requirements: requirements/index.md
+  - Hardware And Software Requirements: requirements/index.md
   
   - Database Installation:
-    - database/index.md
     - Oracle Database Setup: database/oracle-setup.md
     - Database Objects: database/database-objects.md
   
-  - Application Server Setup:
-    - app-server/index.md
-    - Tomcat Configuration: app-server/tomcat.md
-    - Windows Components: app-server/windows.md
   
-  - EPMware Application:
-    - application/index.md
-    - Application Settings: application/settings.md
+  - Install Cygwin : app-server/Cygwin_installation.md
+    
+  - Install Tomcat Apache : app-server/tomcat.md
+
+  - Install EPMware Application : install_ew/install_epmware_application.md
   
-  - Target Applications:
-    - targets/index.md
-    - Planning Classic: targets/planning.md
-    - Hyperion HFM: targets/hfm.md
-    - Cloud Applications (PCMCS/EPBCS): targets/cloud.md
+  - Register Apache As Windows Service : install_ew/reg_apache_as_windows_service.md
   
-  - Agent Installation: agent/index.md
+  - Set JDBC Properties : install_ew/set_jdbc_properties.md
   
-  - Post-Installation: post-install/index.md
+  - EPMware Application Settings :
+    - Global Settings : epmware_app_settings/global_settings.md
+    - Planning Classic - Generate Password File : epmware_app_settings/planning_classic.md
   
-  - Troubleshooting: troubleshooting/index.md
+  - Application Specific Tasks :  
+    - Hyperian HFM : app_specific_tasks/hfm.md
+    - Hyperian Planning : app_specific_tasks/planning.md
+    - PCMCS : app_specific_tasks/pcmcs.md
   
-  - Appendices:
-    - appendices/index.md
-    - Installation Scripts: appendices/scripts.md
-    - Configuration Reference: appendices/configuration.md
-    - Migration Guide: appendices/migration.md
 
 extra:
   copyright: |
