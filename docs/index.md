@@ -94,7 +94,7 @@ EPMware maintains a complete audit trail of all transactions from request to dep
 
     Oracle database setup and schema creation
 
-    [:octicons-arrow-right-24: Install database](database/)
+    [:octicons-arrow-right-24: Install database](database/oracle-setup.md)
 
 -   :material-application:{ .lg .middle } **Application Server**
 
@@ -102,47 +102,8 @@ EPMware maintains a complete audit trail of all transactions from request to dep
 
     Tomcat and prerequisite software setup
 
-    [:octicons-arrow-right-24: Configure server](app-server/)
+    [:octicons-arrow-right-24: Configure server](app-server/Cygwin_installation.md)
 
--   :material-package-variant:{ .lg .middle } **EPMware Application**
-
-    ---
-
-    Deploy and configure the EPMware application
-
-    [:octicons-arrow-right-24: Deploy application](application/)
-
--   :material-target:{ .lg .middle } **Target Applications**
-
-    ---
-
-    Configure connections to EPM applications
-
-    [:octicons-arrow-right-24: Setup targets](targets/)
-
--   :material-robot:{ .lg .middle } **Agent Installation**
-
-    ---
-
-    Install and configure EPMware agents
-
-    [:octicons-arrow-right-24: Install agents](agent/)
-
--   :material-check-circle:{ .lg .middle } **Post-Installation**
-
-    ---
-
-    Verification and initial configuration
-
-    [:octicons-arrow-right-24: Verify setup](post-install/)
-
--   :material-wrench:{ .lg .middle } **Troubleshooting**
-
-    ---
-
-    Common issues and solutions
-
-    [:octicons-arrow-right-24: Get help](troubleshooting/)
 
 </div>
 
